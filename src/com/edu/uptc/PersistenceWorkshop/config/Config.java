@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.config;
+package com.edu.uptc.PersistenceWorkshop.Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,6 +18,8 @@ public class Config {
 	
 	private String recordParkingJSON;
 	
+	private String parkingCapacity;
+	
 	private Properties properties;
 	
 	private Config() {
@@ -29,6 +31,7 @@ public class Config {
 			this.userSER = properties.getProperty("app.config.path.file.user.ser");
 			this.vehicleXML = properties.getProperty("app.config.path.file.vehicle.xml");
 			this.recordParkingJSON = properties.getProperty("app.config.path.file.recordParking.json");
+			this.parkingCapacity = properties.getProperty("app.config.path.file.parkingCapacity");
 			
 		} catch (IOException e) {
 			System.out.println("Error al cargar el archivo properties de configuración: " + e.getMessage());
@@ -41,6 +44,16 @@ public class Config {
 			config = new Config();
 		}
 		return config;
+	}
+	
+	
+
+	public int getParkingCapacity() {
+		return Integer.parseInt(parkingCapacity);
+	}
+
+	public void setParkingCapacity(String parkingCapacity) {
+		this.parkingCapacity = parkingCapacity;
 	}
 
 	public String getPathFile() {

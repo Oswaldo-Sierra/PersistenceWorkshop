@@ -1,12 +1,13 @@
-package com.edu.uptc.PersistenceWorkshop.model;
+package com.edu.uptc.PersistenceWorkshop.Model;
 
 public class VehicleRate {
+	
 	private String typeVehicle;
 	
-	private int price;
+	private long price;
 	
 
-	public VehicleRate(String typeVehicle, int price) {
+	public VehicleRate(String typeVehicle, long price) {
 		this.typeVehicle = typeVehicle;
 		this.price = price;
 	}
@@ -19,11 +20,11 @@ public class VehicleRate {
 		this.typeVehicle = typeVehicle;
 	}
 
-	public int getPrice() {
+	public long getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(long price) {
 		this.price = price;
 	}
 	

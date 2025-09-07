@@ -1,24 +1,34 @@
-package com.edu.uptc.PersistenceWorkshop.model;
+package com.edu.uptc.PersistenceWorkshop.Model;
+
+import com.edu.uptc.PersistenceWorkshop.Enums.ETypeVehicle;
 
 public class Vehicle {
 	private String licensePlate;
-	
-	private String type;
-	
-	private String owner; //dueño del vehiculo
-	
-	private String model;
-	
-	private String color;
-	
-	private int pricePerHour;//no ingresado por usuario
 
-	public Vehicle(String licensePlate, String type, String owner, String model, String color) {
+	private ETypeVehicle eTypeVehicle;
+
+	private String owner; // dueño del vehiculo
+
+	private String model;
+
+	private String color;
+
+	private long pricePerHour;// no ingresado por usuario
+
+	public Vehicle(String licensePlate, ETypeVehicle eTypeVehicle, String owner, String model, String color) {
 		this.licensePlate = licensePlate;
-		this.type = type;
+		this.eTypeVehicle = eTypeVehicle;
 		this.owner = owner;
 		this.model = model;
 		this.color = color;
+	}
+
+	public ETypeVehicle geteTypeVehicle() {
+		return eTypeVehicle;
+	}
+
+	public void seteTypeVehicle(ETypeVehicle eTypeVehicle) {
+		this.eTypeVehicle = eTypeVehicle;
 	}
 
 	public String getLicensePlate() {
@@ -27,14 +37,6 @@ public class Vehicle {
 
 	public void setLicensePlate(String licensePlate) {
 		this.licensePlate = licensePlate;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getOwner() {
@@ -61,16 +63,12 @@ public class Vehicle {
 		this.color = color;
 	}
 
-	public int getPricePerHour() {
+	public long getPricePerHour() {
 		return pricePerHour;
 	}
 
-	public void setPricePerHour(int pricePerHour) {
+	public void setPricePerHour(long pricePerHour) {
 		this.pricePerHour = pricePerHour;
 	}
-	
-	
-	
-	
 
 }

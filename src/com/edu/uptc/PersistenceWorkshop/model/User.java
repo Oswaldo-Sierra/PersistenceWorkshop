@@ -1,8 +1,13 @@
-package com.edu.uptc.PersistenceWorkshop.model;
+package com.edu.uptc.PersistenceWorkshop.Model;
 
-public class User {
-	private String userName;
+import java.io.Serializable;
+
+public class User implements Serializable {
 	
+	private static final long serialVersionUID = 7758888672641333914L;
+
+	private String userName;
+
 	private String password;
 
 	public User(String userName, String password) {
@@ -25,8 +30,5 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
 
 }
