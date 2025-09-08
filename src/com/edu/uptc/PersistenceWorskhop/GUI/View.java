@@ -17,10 +17,10 @@ public class View {
 	public void startMenu() {
 		String loggeo = """
 				Bienvenido
+				Ingrese la opccion deseada(Solo el numero)
 				1.Iniciar sesion
 				2.Registrar usuario
 				3.Salir
-				Ingrese la opcion deseada, solo el numero
 				""";
 		do {
 			System.out.println(loggeo);
@@ -64,7 +64,7 @@ public class View {
 
 	public void crudVehicle() {
 		String menu1 = """
-				\nBienvindo al menu de Vehiculos
+				\nBienvindo al menu de Vehiculos,Ingrese la opccion deseada(Solo el numero)
 				1.Añadir nuevo Vehiculo
 				2.Eliminar un Vehiculo
 				3.Actualizar un Vehiculo
@@ -205,19 +205,25 @@ public class View {
 
 	/** Metodo que Muestra los vehiculos registrados. */
 	private void showVehicles() {
-		System.out.println("Los vehiculos registrados actualmente son:");
-		System.out.println(this.parking.viewVehicle());
+		if (this.parking.numVehicles() != 0) {
+			System.out.println("Los vehiculos registrados actualmente son:");
+			System.out.println(this.parking.viewVehicle());
+
+		}else {
+			System.out.println("No hay vehiculos registrados");
+		}
 	}
 
 	/** Metodo de crud para el recordParking. */
 	private void recordParkingV() {
 		String menu2 = """
-				\nBienvenido al registro de parqueo
+				\nBienvenido al registro de parqueo,Ingrese la opccion deseada(Solo el numero)
 				1.Añadir un nuevo registro de parqueo
 				2.Eliminar un registro de parqueo
 				3.Actualizar un registro de parqueo
 				4.Ver los registros de parqueo actuales
-				5.Volver al menu anterior
+				5.Ver la tasa de vehiculos actuales(Precio segun el vehiculo)
+				6.Volver al menu anterior
 				""";
 		do {
 			System.out.println(menu2);
@@ -236,6 +242,9 @@ public class View {
 				viewRecordP();
 				break;
 			case "5":
+				showVehicleRate();
+				break;
+			case "6":
 				System.out.println("Volviendo al menu anterior...");
 				return;
 			default:
@@ -245,6 +254,8 @@ public class View {
 		} while (true);
 
 	}
+
+	
 
 	private void addRecordP() {
 
@@ -368,7 +379,7 @@ public class View {
 
 	private void viewRecordP() {
 		String reportsInfo = """
-				Seleccione una opción de vista para ver
+				Seleccione una opción de vista para ver,Ingrese la opccion deseada(Solo el numero)
 				1. Los vehículos registrados en un día específico
 				2. Total de dinero recaudado en un día específico
 				3. Volver al menu anterior
@@ -417,6 +428,11 @@ public class View {
 				break;
 			}
 		} while (true);
+	}
+	
+	private void showVehicleRate() {
+		System.out.println("El precio por tipo de vehiculo es:");
+		System.out.println(this.parking.showVehicleR());	
 	}
 
 }

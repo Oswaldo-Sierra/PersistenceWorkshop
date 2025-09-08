@@ -110,6 +110,8 @@ public class Parking {
 		return vehiclesRegistered.toString();
 
 	}
+	
+	
 
 	/** Metodos encargados de hacer el crud para el recordParking. */
 
@@ -231,6 +233,20 @@ public class Parking {
 
 		return "El dinero que se recaudó el día " + date + " fue: " + moneyTotal + "\n";
 	}
+	
+	
+	/** Metodo encargado de mostrar la tasa de vehiculos actuales*/
+	public String showVehicleR() {
+		StringBuilder b = new StringBuilder();
+		b.append("| Tipo de vehiculo | Precio por hora |\n");
+		int size = this.handlingPersistence.getListVehicleRate().size();
+		for (int i = 0; i < size; i++) {
+			VehicleRate vR = this.handlingPersistence.getListVehicleRate().get(i);
+			b.append("| ").append(vR.getTypeVehicle()).append(" | ").append(vR.getPrice()).append(" |")
+					.append("\n");
+		}
+		return b.toString();
+	}
 
 	/** Validaciones necesarias. */
 
@@ -244,15 +260,19 @@ public class Parking {
 		return this.handlingPersistence.findVehicleByLicensePlate(licensePlate) != null;
 	}
 
+
+	public int numVehicles() {
+		return this.handlingPersistence.getListVehicle().size();
+	}
 	/** Metodo encargado de validar si el recordParking existe y este es unico */
 	public EParkingStatus validateRecordParkingByEntryTime(String licensePlate, String entryTime) {
 		RecordParking r = this.handlingPersistence.findRecordParkingByLicensePlatebyEntreTime(licensePlate, entryTime);
 
 		if (r != null) {
 			if (r.getDepartureTime() == null) {
-				return EParkingStatus.INSIDE; // sigue dentro
+				return EParkingStatus.INSIDE; 
 			} else {
-				return EParkingStatus.ALREADY_EXISTS; // ya salió
+				return EParkingStatus.ALREADY_EXISTS; 
 			}
 		}
 		return EParkingStatus.NOT_FOUND;
