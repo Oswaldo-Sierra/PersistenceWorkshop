@@ -32,7 +32,7 @@ La información se maneja con diferentes mecanismos de persistencia:
 - **Consultar** registros actuales:
   - Número de vehículos ingresados en un día dado
   - Total de dinero recaudado en un día dado.
-- **consultar precio por hora por vehiculo**
+- **Consultar precio por hora por vehiculo**
 
 ## Validaciones implementadas
 - Control de **cupos disponibles** al ingresar un vehículo.
