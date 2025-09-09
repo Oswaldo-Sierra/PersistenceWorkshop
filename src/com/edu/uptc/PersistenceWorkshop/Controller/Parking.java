@@ -5,11 +5,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import com.edu.uptc.PersistenceWorkshop.Enums.EParkingStatus;
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeFiLe;
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeVehicle;
-import com.edu.uptc.PersistenceWorkshop.Model.*;
-import com.edu.uptc.PersistenceWorkshop.Persistence.HandlingPersistence;
+import com.edu.uptc.PersistenceWorkshop.enums.EParkingStatus;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeFiLe;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeVehicle;
+import com.edu.uptc.PersistenceWorkshop.model.*;
+import com.edu.uptc.PersistenceWorkshop.persistence.HandlingPersistence;
 
 public class Parking {
 

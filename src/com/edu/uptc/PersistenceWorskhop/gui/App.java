@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorskhop.GUI;
+package com.edu.uptc.PersistenceWorskhop.gui;
 
 public class App {
 	public static void main(String[] args) {

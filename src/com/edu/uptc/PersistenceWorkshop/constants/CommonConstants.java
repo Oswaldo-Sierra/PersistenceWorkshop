@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Constants;
+package com.edu.uptc.PersistenceWorkshop.constants;
 
 public class CommonConstants {
 	public static final String BREAK_LINE = "\n";

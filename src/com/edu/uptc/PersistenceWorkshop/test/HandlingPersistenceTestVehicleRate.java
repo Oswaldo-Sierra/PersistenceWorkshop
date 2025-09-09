@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Test;
+package com.edu.uptc.PersistenceWorkshop.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeFiLe;
-import com.edu.uptc.PersistenceWorkshop.Model.VehicleRate;
-import com.edu.uptc.PersistenceWorkshop.Persistence.HandlingPersistence;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeFiLe;
+import com.edu.uptc.PersistenceWorkshop.model.VehicleRate;
+import com.edu.uptc.PersistenceWorkshop.persistence.HandlingPersistence;
 
 class HandlingPersistenceTestVehicleRate {
 	private HandlingPersistence handlingPersistence = new HandlingPersistence();

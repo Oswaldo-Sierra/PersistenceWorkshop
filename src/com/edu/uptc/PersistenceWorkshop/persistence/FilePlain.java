@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Persistence;
+package com.edu.uptc.PersistenceWorkshop.persistence;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.edu.uptc.PersistenceWorkshop.Constants.*;
-import com.edu.uptc.PersistenceWorkshop.Config.*;
+import com.edu.uptc.PersistenceWorkshop.config.*;
+import com.edu.uptc.PersistenceWorkshop.constants.*;
 
 public class FilePlain {
 	protected Config config;

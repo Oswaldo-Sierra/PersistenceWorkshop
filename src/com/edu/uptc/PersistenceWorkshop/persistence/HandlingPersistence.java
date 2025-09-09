@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Persistence;
+package com.edu.uptc.PersistenceWorkshop.persistence;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,11 +19,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.edu.uptc.PersistenceWorkshop.Constants.CommonConstants;
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeFiLe;
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeVehicle;
 import com.edu.uptc.PersistenceWorkshop.Interface.IActionsFile;
-import com.edu.uptc.PersistenceWorkshop.Model.*;
+import com.edu.uptc.PersistenceWorkshop.constants.CommonConstants;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeFiLe;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeVehicle;
+import com.edu.uptc.PersistenceWorkshop.model.*;
 
 public class HandlingPersistence extends FilePlain implements IActionsFile {
 	private List<VehicleRate> listVehicleRate;

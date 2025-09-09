@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Model;
+package com.edu.uptc.PersistenceWorkshop.model;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;

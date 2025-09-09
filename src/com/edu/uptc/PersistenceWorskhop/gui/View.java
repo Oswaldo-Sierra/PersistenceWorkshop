@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorskhop.GUI;
+package com.edu.uptc.PersistenceWorskhop.gui;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.edu.uptc.PersistenceWorkshop.Controller.Parking;
-import com.edu.uptc.PersistenceWorkshop.Enums.EParkingStatus;
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeVehicle;
+import com.edu.uptc.PersistenceWorkshop.enums.EParkingStatus;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeVehicle;
 
 public class View {
 	private Scanner sc = new Scanner(System.in);
@@ -373,7 +373,8 @@ public class View {
 		} else if (status == EParkingStatus.ALREADY_EXISTS) {
 			System.out.println("El vehículo ya tiene registrada una salida para esa entrada.");
 		} else {
-			System.out.println("El vehículo ya no está dentro del parqueadero.");
+			System.out.println("El vehículo ya no está dentro del parqueadero." 
+					+ "\nRevise la fecha de entrada o la placa de vehiculo");
 		}
 	}
 

@@ -1,6 +1,6 @@
-package com.edu.uptc.PersistenceWorkshop.Model;
+package com.edu.uptc.PersistenceWorkshop.model;
 
-import com.edu.uptc.PersistenceWorkshop.Enums.ETypeVehicle;
+import com.edu.uptc.PersistenceWorkshop.enums.ETypeVehicle;
 
 public class Vehicle {
 	private String licensePlate;

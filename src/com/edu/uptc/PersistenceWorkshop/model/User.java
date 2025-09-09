@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Model;
+package com.edu.uptc.PersistenceWorkshop.model;
 
 import java.io.Serializable;
 

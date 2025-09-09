@@ -1,4 +1,4 @@
-package com.edu.uptc.PersistenceWorkshop.Config;
+package com.edu.uptc.PersistenceWorkshop.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
